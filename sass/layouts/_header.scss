@@ -1,0 +1,61 @@
+.header {
+	border-bottom: 1px solid #ececec;
+
+	&__email,
+	&__tel {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.14;
+		letter-spacing: 0.02em;
+		color: var(--main-text-color);
+		padding-top: 24px;
+		padding-bottom: 25px;
+		@include position(flex, center, null);
+	}
+
+	&__icon {
+		margin-right: 10px;
+		background-position: center;
+		background-size: contain;
+		fill: currentColor;
+	}
+}
+
+.header > .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+}
+
+.header__contacts,
+.navigation__list {
+	display: flex;
+}
+
+.header__item,
+.navigation__item {
+	display: flex;
+	align-items: center;
+}
+
+.navigation__item:not(:last-child),
+.header__item:not(:last-child) {
+	margin-right: 50px;
+}
+
+.navigation__link {
+	position: relative;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: $header-color;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	fill: currentColor;
+}
