@@ -1,11 +1,23 @@
 .customers__list {
-	@include position(flex, null, center);
+	display: flex;
+	flex-wrap: wrap;
 	gap: 30px;
+}
+
+.customers__item {
+	width: calc((100% - 30px) / 2);
+
+	@include tablet {
+		width: calc((100% - 60px) / 3);
+	}
+
+	@include desktop {
+		width: calc((100% - 150px) / 6);
+	}
 }
 
 .customers__link {
 	@include position(flex, center, center);
-	width: 170px;
 	height: 92px;
 	border: 1px solid #afb1b8;
 	border-radius: 4px;

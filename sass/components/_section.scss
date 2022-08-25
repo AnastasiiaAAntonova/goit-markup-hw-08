@@ -4,9 +4,9 @@
 
 	&__title {
 		@include font(28, 1.18, 700, 0.03em);
+		margin-bottom: 30px;
 		text-align: center;
 		color: $header-color;
-		margin-bottom: 30px;
 
 		@include desktop {
 			@include font(36, 1.17, null, null);
