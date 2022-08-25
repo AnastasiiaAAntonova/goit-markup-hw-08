@@ -3,7 +3,21 @@
 }
 
 .principles__list {
-	@include position(flex, null, space-between);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.principles__item {
+	width: 100%;
+
+	@include tablet {
+		width: calc((100% - 30px) / 2);
+	}
+
+	@include desktop {
+		width: calc((100% - 90px) / 4);
+	}
 }
 
 .principles__subtitle {
@@ -11,15 +25,19 @@
 	text-transform: uppercase;
 	color: $header-color;
 	margin-bottom: 10px;
+	text-align: center;
+
+	@include tablet {
+		text-align: justify;
+	}
 }
 .principles__text {
 	@include font(14, 1.71, null, 0.03em);
-	max-width: 270px;
+	width: 100%;
 }
 
 .principles__card {
 	@include position(flex, center, center);
-	width: 270px;
 	height: 120px;
 	background-color: #f5f4fa;
 	border-radius: 4px;
