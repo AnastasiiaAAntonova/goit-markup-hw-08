@@ -1,4 +1,4 @@
-.page-footer {
+.footer {
 	background-color: #2f303a;
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -23,9 +23,7 @@
 	}
 
 	&__link {
-		font-size: 14px;
-		line-height: 1.71;
-		letter-spacing: 0.03em;
+		@include font(14, 1.71, null, 0.03em);
 		color: rgba(255, 255, 255, 0.6);
 
 		&--address {
@@ -34,30 +32,29 @@
 	}
 }
 
-.footer_socials {
+.footer__socials {
 	margin-left: 70px;
 }
 
 .footer__header,
 .footer-form-header,
-.footer-lable {
+.subscribe__label {
 	@include font(14, 1.14, 700, 0.03em);
 	text-transform: uppercase;
 	color: var(--white-color);
 	margin-bottom: 20px;
 }
 
-.footer-lable {
+.subscribe__label {
 	display: inline-block;
 	margin-bottom: 20px;
 }
 
-.footer-form {
+.subscribe {
 	margin-left: 93px;
 
-	&-area {
-		display: flex;
-		align-items: baseline;
+	&__area {
+		@include position(flex, baseline, null);
 		gap: 12px;
 
 		& input {

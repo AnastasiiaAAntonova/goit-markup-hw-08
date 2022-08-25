@@ -6,6 +6,7 @@
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
+	overflow-y: scroll;
 
 	transition: opacity 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67),
 		visibility 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
@@ -32,17 +33,14 @@
 
 	transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
 
-	&-header {
-		font-weight: 700;
+	&__header {
+		@include font(20, 1.15, 700, 0.03em);
 		margin-bottom: 12px;
-		font-size: 20px;
-		line-height: 1.15;
 		text-align: center;
-		letter-spacing: 0.03em;
 		color: $header-color;
 	}
 
-	&-form {
+	&__form {
 		display: flex;
 		flex-direction: column;
 		width: 448px;
@@ -50,7 +48,7 @@
 		margin-right: auto;
 	}
 
-	&-item {
+	&__item {
 		position: relative;
 		width: 100%;
 		margin-bottom: 10px;
@@ -61,12 +59,12 @@
 	}
 }
 
-.form-input:focus-visible,
+.modal__input:focus-visible,
 .comments:focus-visible {
 	outline: none;
 }
 
-.form-input {
+.modal__input {
 	margin: 0;
 	width: 100%;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -81,16 +79,14 @@
 	}
 }
 
-.modal-label,
-.comments-label {
-	font-size: 12px;
-	line-height: 1.17;
-	letter-spacing: 0.01em;
+.modal__label,
+.comments__label {
+	@include font(12, 1.17, null, 0.01em);
 	color: #757575;
 	margin-bottom: 4px;
 }
 
-.modal-form-icon {
+.modal__icon {
 	width: 18px;
 	height: 18px;
 	position: absolute;
@@ -98,13 +94,12 @@
 	top: 11px;
 	left: 12px;
 
-	.form-input:focus ~ & {
+	.modal__input:focus ~ & {
 		fill: var(--accent-color);
 	}
 }
 
 textarea {
-	display: block;
 	resize: none;
 	padding: 12px 16px;
 	width: 100%;
@@ -117,22 +112,18 @@ textarea {
 	}
 
 	&::placeholder {
-		font-size: 12px;
-		line-height: 1.17;
-		letter-spacing: 0.01em;
+		@include font(12, 1.17, null, 0.01em);
 		color: rgba(117, 117, 117, 0.5);
 	}
 }
 
-.comments-field {
+.comments__field {
 	margin-bottom: 20px;
 }
 
-.checkbox-label {
+.checkbox__label {
 	@include position(flex, center, center);
-	font-size: 14px;
-	line-height: 1.71;
-	letter-spacing: 0.03em;
+	@include font(14, 1.71, null, 0.03em);
 	color: #757575;
 
 	& span {
@@ -154,18 +145,16 @@ textarea {
 	}
 }
 
-.checkbox-icon {
+.checkbox__icon {
 	fill: transparent;
 
-	.checkbox:checked + .checkbox-label & {
+	.checkbox:checked + .checkbox__label & {
 		fill: var(--white-color);
 	}
 }
 
-.checkbox-link {
-	font-size: 14px;
-	line-height: 1.71;
-	letter-spacing: 0.03em;
+.checkbox__link {
+	@include font(14, 1.71, null, 0.03em);
 	text-decoration-line: underline;
 	color: var(--accent-color);
 }

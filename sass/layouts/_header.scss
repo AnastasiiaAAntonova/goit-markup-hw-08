@@ -3,10 +3,7 @@
 
 	&__email,
 	&__tel {
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 1.14;
-		letter-spacing: 0.02em;
+		@include font(14, 1.14, 500, 0.02em);
 		color: var(--main-text-color);
 		padding-top: 24px;
 		padding-bottom: 25px;
@@ -22,14 +19,11 @@
 }
 
 .header > .container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	@include position(flex, center, space-between);
 }
 
 .navigation {
-	display: flex;
-	align-items: center;
+	@include position(flex, center, null);
 }
 
 .header__contacts,
@@ -39,8 +33,7 @@
 
 .header__item,
 .navigation__item {
-	display: flex;
-	align-items: center;
+	@include position(flex, center, null);
 }
 
 .navigation__item:not(:last-child),
@@ -50,10 +43,7 @@
 
 .navigation__link {
 	position: relative;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include font(14, 1.14, 500, 0.02em);
 	color: $header-color;
 	padding-top: 32px;
 	padding-bottom: 32px;

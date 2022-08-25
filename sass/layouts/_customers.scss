@@ -1,6 +1,5 @@
 .customers__list {
-	display: flex;
-	justify-content: center;
+	@include position(flex, null, center);
 	gap: 30px;
 }
 

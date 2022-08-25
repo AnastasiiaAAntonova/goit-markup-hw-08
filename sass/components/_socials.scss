@@ -1,7 +1,5 @@
 .socials {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include position(flex, null, center);
 	gap: 10px;
 
 	&__link {
