@@ -57,8 +57,12 @@
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	border: transparent;
-	padding: 6px 20px;
+	padding: 6px 22px;
 	cursor: pointer;
+
+	&--first {
+		padding: 6px 25px;
+	}
 
 	transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic), color 250ms var(--cubic);
 }
