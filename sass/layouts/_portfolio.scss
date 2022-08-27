@@ -2,10 +2,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
+	max-width: 350px;
 	row-gap: 15px;
 	margin-bottom: 40px;
 
 	@include tablet {
+		max-width: 100%;
 		justify-content: center;
 		margin-bottom: 30px;
 	}
