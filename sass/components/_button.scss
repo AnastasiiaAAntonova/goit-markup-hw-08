@@ -12,8 +12,13 @@
 	transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 
 	&--hero {
-		min-width: 216px;
-		padding: 10px 32px;
+		min-width: 200px;
+		padding: 10px 24px;
+
+		@include desktop {
+			min-width: 216px;
+			padding: 10px 32px;
+		}
 	}
 
 	&--footer {

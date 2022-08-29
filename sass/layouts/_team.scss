@@ -24,10 +24,6 @@
 	}
 }
 
-.team__item:last-child {
-	margin-right: 0;
-}
-
 .team__subtitle {
 	@include font(16, 1.19, 500, 0.03em);
 	text-align: center;

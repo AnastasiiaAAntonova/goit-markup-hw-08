@@ -1,3 +1,11 @@
+.works {
+	display: none;
+
+	@include desktop {
+		display: contents;
+	}
+}
+
 .works__list {
 	@include position(flex, space-between, null);
 	gap: 30px;
