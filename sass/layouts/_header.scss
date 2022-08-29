@@ -3,11 +3,19 @@
 
 	&__email,
 	&__tel {
-		@include font(14, 1.14, 500, 0.02em);
-		color: var(--main-text-color);
-		padding-top: 24px;
-		padding-bottom: 25px;
-		@include position(flex, center, null);
+		@include tablet {
+			@include font(12, 1.17, 500, 0.02em);
+			color: var(--main-text-color);
+			padding: 0;
+		}
+
+		@include desktop {
+			@include font(14, 1.14, 500, 0.02em);
+			color: var(--main-text-color);
+			padding-top: 24px;
+			padding-bottom: 25px;
+			@include position(flex, center, null);
+		}
 	}
 
 	&__icon {
@@ -26,27 +34,40 @@
 	@include position(flex, center, null);
 }
 
-.header__contacts,
 .navigation__list {
 	display: none;
 
 	@include tablet {
 		display: flex;
+		margin-right: auto;
+		gap: 50px;
 	}
 
 	@include desktop {
 		display: flex;
+		margin-right: auto;
+	}
+}
+
+.header__contacts {
+	display: none;
+
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	@include desktop {
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
 	}
 }
 
 .header__item,
 .navigation__item {
 	@include position(flex, center, null);
-}
-
-.navigation__item:not(:last-child),
-.header__item:not(:last-child) {
-	margin-right: 50px;
 }
 
 .navigation__link {
