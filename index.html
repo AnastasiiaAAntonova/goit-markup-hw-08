@@ -17,11 +17,11 @@
 		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 	<body>
-		<!-- <header class="header">
+		<header class="header">
 			<div class="container">
-				<nav class="navigation"> -->
+				<nav class="navigation">
 		<!-- prettier-ignore -->
-		<!-- <a href="./" class="logo logo--header logo-link">
+		<a href="./" class="logo logo--header logo-link">
 					<span>Web</span>Studio</a>
 					<ul class="navigation__list list">
 						<li class="navigation__item"><a href="./" class="navigation__link link current">Студія</a></li>
@@ -49,9 +49,46 @@
 						</a>
 					</li>
 				</ul>
+				<button class="menu__btn menu-open" type="button"><svg class="menu__icon" width="40" height="40"><use href="./images/icons.svg#icon-menu"></use></svg></button>
 			</div>
-		</header> -->
-		<main>
+			<div class="menu is-hidden">
+				<div class="container">
+					<button type="button" class="menu-close">
+					<svg width="11" height="11">
+						<use href="./images/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+					<div class="menu__top">
+						<ul class="menu__navigation list">
+						<li class="menu__item"><a href="./" class="menu__link link">Студія</a></li>
+						<li class="menu__item">
+							<a href="./portfolio.html" class="menu__link link">Портфоліо</a>
+						</li>
+						<li class="menu__item"><a href="./" class="menu__link link">Контакти</a></li>
+					</ul>
+					</div>
+					<div class="menu__bottom">
+						<ul class="menu__contacts list">
+							<li class="menu__contacts__item">
+						<a href="tel:+380961111111" class="menu__contacts__tel link">+38 096 111 11 11</a>
+					</li>
+					<li class="menu__contacts__item">
+						<a href="mailto:info@devstudio.com" class="menu__contacts__email link">info@devstudio.com</a>
+					</li>
+					
+				</ul>
+				<ul class="menu__socials list">
+					<li class="menu__socials__item"><a href="" class="menu__socials__link link">Instagram</a></li>
+					<li class="menu__socials__item"><a href="" class="menu__socials__link link">Twitter</a></li>
+					<li class="menu__socials__item"><a href="" class="menu__socials__link link">Facebook</a></li>
+					<li class="menu__socials__item"><a href="" class="menu__socials__link link">LinkedIn</a></li>
+				</ul>
+					</div>
+				</div>
+			</div>
+			
+		</header>
+		<!-- <main>
 			<section class="hero section">
 				<div class="container">
 					<h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -345,7 +382,7 @@
 						</li>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 			<!-- <section class="customers section">
 				<div class="container">
 					<h2 class="section__title">Постійні клієнти</h2>
@@ -527,5 +564,6 @@
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
+		<script src="./js/menu.js"></script>
 	</body>
 </html>
