@@ -11,6 +11,10 @@
 		justify-content: center;
 		margin-bottom: 30px;
 	}
+
+	@include desktop {
+		margin-bottom: 50px;
+	}
 }
 
 .portfolio__item {
