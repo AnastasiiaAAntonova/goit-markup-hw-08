@@ -144,7 +144,7 @@
 }
 
 @include tablet {
-	.tablet-top {
+	.footer__top {
 		@include position(flex, baseline, flex-start);
 		gap: 165px;
 		margin: auto;
@@ -152,7 +152,7 @@
 }
 
 @include desktop {
-	.tablet-top {
+	.footer__top {
 		@include position(flex, baseline, flex-start);
 		gap: 70px;
 		margin: 0;
