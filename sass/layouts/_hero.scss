@@ -41,7 +41,6 @@
 
 	&__title {
 		@include font(26, 1.62, 900, 0.06em);
-		text-align: center;
 		text-transform: uppercase;
 		max-width: 360px;
 		color: var(--white-color);

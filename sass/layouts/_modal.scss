@@ -29,7 +29,6 @@
 
 	@include tablet {
 		width: 450px;
-		min-height: 581px;
 	}
 
 	@include desktop {
@@ -48,8 +47,6 @@
 	}
 
 	&__form {
-		display: flex;
-		flex-direction: column;
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
@@ -100,7 +97,6 @@
 	width: 18px;
 	height: 18px;
 	position: absolute;
-	display: inline-block;
 	top: 11px;
 	left: 12px;
 
