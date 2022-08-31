@@ -7,7 +7,6 @@
 		max-width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 60px;
 
 		@include desktop {
 			flex-direction: row;
@@ -20,8 +19,8 @@
 .footer-logo-contacts {
 	text-align: center;
 
-	@include tablet {
-		margin-left: 76px;
+	@include desktop {
+		text-align: left;
 	}
 }
 
@@ -30,6 +29,11 @@
 	justify-content: center;
 	gap: 8px;
 	font-style: normal;
+	margin-bottom: 60px;
+
+	@include desktop {
+		margin-bottom: 0;
+	}
 
 	&__list {
 		max-width: 100%;
@@ -37,6 +41,10 @@
 
 	&__item {
 		margin-bottom: 9px;
+
+		@include tablet {
+			margin-bottom: 8px;
+		}
 	}
 
 	&__item:last-child {
@@ -54,10 +62,13 @@
 }
 
 .footer__socials {
-	display: flex;
+	@include position(flex, center, center);
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	margin-bottom: 60px;
+
+	@include desktop {
+		margin-bottom: 0;
+	}
 }
 
 .footer__header,
@@ -71,20 +82,26 @@
 
 .subscribe__label {
 	display: inline-block;
-	margin-bottom: 20px;
 }
 
 .subscribe {
-	display: flex;
+	@include position(flex, center, center);
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
+	@include desktop {
+		align-items: start;
+	}
 
 	&__area {
 		@include position(flex, baseline, null);
 		flex-direction: column;
 		width: 100%;
 		gap: 20px;
+
+		@include desktop {
+			flex-direction: row;
+			gap: 12px;
+		}
 
 		& input {
 			margin: 0;
@@ -102,6 +119,10 @@
 			@include tablet {
 				max-width: 450px;
 				margin: auto;
+			}
+
+			@include desktop {
+				width: 358px;
 			}
 		}
 
@@ -124,12 +145,16 @@
 
 @include tablet {
 	.tablet-top {
-		display: flex;
-		align-items: baseline;
+		@include position(flex, baseline, flex-start);
 		gap: 165px;
+		margin: auto;
 	}
+}
 
-	@include desktop {
+@include desktop {
+	.tablet-top {
+		@include position(flex, baseline, flex-start);
 		gap: 70px;
+		margin: 0;
 	}
 }
